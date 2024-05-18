@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head> 
+<body>
+    <div class="container">
+    <h1>Conversion Results</h1>
+    <p>Base Currency: {{ base }}</p>
+    <p>Amount: {{ amount }}</p>
+    <div class="form-group">
+        <h2>Converted Amounts </h2>
+        <ul>
+            {% for currency, amount in data.items() %}
+                <li>{{ currency }}: {{amount}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="/" class="button">Back to Converter</a>
+</div>
+</body>
+</html>

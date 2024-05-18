@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1><b>Currency Converter</b></h1>
+        <form action ="/convert" method="post">
+            <div class="form-group">
+                <label for="base">Base Currency</label>
+                <select id="base" name="base" required>
+                    <option value="USD"> Dollars</option>
+                    <option value="EUR"> Euro</option>
+                    <option value="BRL"> Reais</option>
+                    <option value="JPY"> Japanese Yen</option>
+                </select>
+            </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" required><br>
+        </div>
+            <button type="submit">Convert</button>
+        </form>
+    </div>
+</body>
+</html>
